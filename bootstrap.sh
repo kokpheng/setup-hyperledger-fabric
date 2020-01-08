@@ -127,7 +127,7 @@ binaryDownload() {
         echo "==> Partial binary file found. Resuming download..."
         binaryIncrementalDownload "${BINARY_FILE}" "${URL}"
     else
-        curl "${URL}" | tar xz || rc=$?
+        wget -O "${URL}" | tar xz || rc=$?
         if [ -n "$rc" ]; then
             echo "==> There was an error downloading the binary file. Switching to incremental download."
             echo "==> Downloading file..."
