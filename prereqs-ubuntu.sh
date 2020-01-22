@@ -23,7 +23,13 @@
 # Exit on any failure
 set -e
 
-source $(dirname "$0")/env.sh
+if [ -e "./env.sh" ]; then
+    source $(dirname "$0")/env.sh
+else 
+    # if version not passed in, use default version
+    NVM_VERSION_TAG=0.35.2
+    DOCKER_COMPOSE_VERSION_TAG=1.25.1
+fi 
 
 NVM_VERSION=$NVM_VERSION_TAG
 

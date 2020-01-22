@@ -5,7 +5,14 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-source $(dirname "$0")/env.sh
+if [ -e "./env.sh" ]; then
+    source $(dirname "$0")/env.sh
+else 
+    # if version not passed in, default to latest released version
+    IMAGE_TAG=latest
+    THIRDPARTY_IMAGE_VERSION=latest
+fi 
+
 
 # if version not passed in, default to latest released version
 VERSION=$IMAGE_TAG
