@@ -9,15 +9,16 @@ if [ -e "./env.sh" ]; then
     source $(dirname "$0")/env.sh
 else 
     # if version not passed in, default to latest released version
-    IMAGE_TAG=1.4.4
-    THIRDPARTY_IMAGE_VERSION=1.4.4
+    IMAGE_TAG=2.0.0
+    CA_IMAGE_TAG=1.4.6
+    THIRDPARTY_IMAGE_VERSION=0.4.18
 fi 
 
 
 # if version not passed in, default to latest released version
 VERSION=$IMAGE_TAG
 # if ca version not passed in, default to latest released version
-CA_VERSION=$IMAGE_TAG
+CA_VERSION=$CA_IMAGE_TAG
 # current version of thirdparty images (couchdb, kafka and zookeeper) released
 THIRDPARTY_IMAGE_VERSION=$THIRDPARTY_IMAGE_VERSION
 
