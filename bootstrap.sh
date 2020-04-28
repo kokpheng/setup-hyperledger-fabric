@@ -9,8 +9,8 @@ if [ -e "./env.sh" ]; then
     source $(dirname "$0")/env.sh
 else 
     # if version not passed in, default to latest released version
-    IMAGE_TAG=1.4.6
-    CA_IMAGE_TAG=1.4.6
+    IMAGE_TAG=1.4.5
+    CA_IMAGE_TAG=1.4.5
     THIRDPARTY_IMAGE_VERSION=0.4.18
 fi 
 
